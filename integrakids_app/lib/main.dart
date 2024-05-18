@@ -4,5 +4,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'src/integrakids_app.dart';
 
 void main() {
-  runApp(const ProviderScope(child: IntegrakidsApp()));
+  runApp(
+    const ProviderScope(
+      child: IntegrakidsApp(),
+    ),
+  );
 }

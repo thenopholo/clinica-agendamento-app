@@ -1,55 +1,135 @@
 {
-    "users": [
-        {
-            "id": 5,
-            "name": "Terapeuta 1",
-            "email": "rodrigorahman1@gmail.com",
-            "password": "123123",
-            "profile": "ADM",
-            "work_days": [
-                "Seg",
-                "Qua"
-            ],
-            "work_hours": [
-                6,
-                7,
-                8
-            ]
-        }
-    ],
-    "adm_users": [],
-    "clinica": [
-        {
-            "id": 2,
-            "user_id": "5",
-            "name": "IntegraKids",
-            "email": "atendimento@clinicaintegrakids.com",
-            "opening_days": [
-                "Seg",
-                "Qua",
-                "Sab"
-            ],
-            "opening_hours": [
-                6,
-                7,
-                8,
-                9,
-                18,
-                19,
-                20,
-                12,
-                13
-            ]
-        }
-    ],
-    "schedules": [
-        {
-            "id": 1,
-            "barbershop_id": 2,
-            "user_id": 5,
-            "client_name": "teste",
-            "date": "2023-08-09T00:00:00.000Z",
-            "time": 8
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "amd1",
+      "email": "rodrigorahman1@gmail.com",
+      "password": "123123",
+      "profile": "ADM",
+      "work_days": [
+        "Seg",
+        "Qua"
+      ],
+      "work_hours": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Rodrigo Thenopholo",
+      "email": "rodrigo@teste.com",
+      "password": "123123",
+      "profile": "ADM"
+    },
+    {
+      "id": 3,
+      "name": "Milena Spina",
+      "email": "teste@teste.com",
+      "password": "123123",
+      "profile": "ADM"
+    }
+  ],
+  "adm_users": [
+    {
+      "id": 1,
+      "name": "Terapeuta 01",
+      "email": "terapeuta@teste.com",
+      "password": "123123",
+      "profile": "EMPLOYEE"
+    }
+  ],
+  "clinica": [
+    {
+      "id": 2,
+      "user_id": "1",
+      "name": "IntegraKids",
+      "email": "atendimento@clinicaintegrakids.com",
+      "opening_days": [
+        "Seg",
+        "Qua",
+        "Sab"
+      ],
+      "opening_hours": [
+        6,
+        7,
+        8,
+        9,
+        18,
+        19,
+        20,
+        12,
+        13
+      ]
+    },
+    {
+      "id": 3,
+      "user_id": "2",
+      "name": "Integrakids",
+      "email": "integra@teste.com",
+      "opening_days": [
+        "Seg",
+        "Ter",
+        "Qua",
+        "Qui",
+        "Sex",
+        "Sab"
+      ],
+      "opening_hours": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "id": 4,
+      "user_id": "3",
+      "name": "Integrakids",
+      "email": "adm@teste.com",
+      "opening_days": [
+        "Seg",
+        "Ter",
+        "Qua",
+        "Qui",
+        "Sex",
+        "Sab"
+      ],
+      "opening_hours": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    }
+  ],
+  "schedules": [
+    {
+      "id": 1,
+      "barbershop_id": 2,
+      "user_id": 5,
+      "client_name": "teste",
+      "date": "2023-08-09T00:00:00.000Z",
+      "time": 8
+    }
+  ]
 }
