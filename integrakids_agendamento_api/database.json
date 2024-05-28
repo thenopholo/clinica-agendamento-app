@@ -18,31 +18,60 @@
     },
     {
       "id": 2,
-      "name": "Rodrigo Thenopholo",
-      "email": "rodrigo@teste.com",
+      "name": "Rodrigo Rahman 1 Employee",
+      "email": "rodrigorahman1employee@gmail.com",
       "password": "123123",
-      "profile": "ADM"
+      "profile": "EMPLOYEE",
+      "clinica_id": 2,
+      "work_days": [
+        "Seg",
+        "Qua"
+      ],
+      "work_hours": [
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 3,
-      "name": "Milena Spina",
-      "email": "teste@teste.com",
+      "name": "Rodrigo Rahman 1 Employee",
+      "email": "rodrigorahman1employee@gmail.com",
       "password": "123123",
-      "profile": "ADM"
-    }
-  ],
-  "adm_users": [
+      "profile": "EMPLOYEE",
+      "clinica_id": 4,
+      "work_days": [
+        "Seg",
+        "Qua"
+      ],
+      "work_hours": [
+        6,
+        7,
+        8
+      ]
+    },
     {
-      "id": 1,
-      "name": "Terapeuta 01",
-      "email": "terapeuta@teste.com",
+      "id": 4,
+      "name": "Rodrigo Rahman 1 Employee",
+      "email": "rodrigorahman1employee@gmail.com",
       "password": "123123",
-      "profile": "EMPLOYEE"
+      "profile": "EMPLOYEE",
+      "clinica_id": 4,
+      "work_days": [
+        "Seg",
+        "Qua"
+      ],
+      "work_hours": [
+        6,
+        7,
+        8
+      ]
     }
   ],
+  "adm_users": [],
   "clinica": [
     {
-      "id": 2,
+      "id": 4,
       "user_id": "1",
       "name": "IntegraKids",
       "email": "atendimento@clinicaintegrakids.com",
@@ -61,64 +90,6 @@
         20,
         12,
         13
-      ]
-    },
-    {
-      "id": 3,
-      "user_id": "2",
-      "name": "Integrakids",
-      "email": "integra@teste.com",
-      "opening_days": [
-        "Seg",
-        "Ter",
-        "Qua",
-        "Qui",
-        "Sex",
-        "Sab"
-      ],
-      "opening_hours": [
-        7,
-        8,
-        9,
-        10,
-        11,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20
-      ]
-    },
-    {
-      "id": 4,
-      "user_id": "3",
-      "name": "Integrakids",
-      "email": "adm@teste.com",
-      "opening_days": [
-        "Seg",
-        "Ter",
-        "Qua",
-        "Qui",
-        "Sex",
-        "Sab"
-      ],
-      "opening_hours": [
-        7,
-        8,
-        9,
-        10,
-        11,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20
       ]
     }
   ],

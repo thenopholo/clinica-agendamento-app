@@ -84,7 +84,7 @@ class UserRepositoryImpl implements UserRepository {
       int clinicaId) async {
     try {
       final Response(:List data) = await restClient.auth.get(
-        '/user',
+        '/users',
         queryParameters: {'clinica_id': clinicaId},
       );
       final employees = data.map((e) => UserModelEmployee.fromMap(e)).toList();

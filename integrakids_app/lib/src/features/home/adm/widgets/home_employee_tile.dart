@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/ui/utils/app_colors.dart';
 import '../../../../core/ui/utils/app_font.dart';
+import '../../../../core/ui/utils/app_images.dart';
 import '../../../../core/ui/utils/integrakids_theme.dart';
 import '../../../../core/ui/widgets/integrakids_icons.dart';
 import '../../../../model/user_model.dart';
@@ -39,7 +40,7 @@ class HomeEmployeeTile extends StatelessWidget {
               image: DecorationImage(
                 image: switch (employee.avatar) {
                   final avatar? => NetworkImage(avatar),
-                  _ => const AssetImage('assets/images/avatar.png'),
+                  _ => const AssetImage(AppImages.avatar),
                 } as ImageProvider,
                 fit: BoxFit.cover,
               ),
@@ -53,13 +54,14 @@ class HomeEmployeeTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
-                  'Nome Sobrenome',
-                  style: TextStyle(
-                      color: AppColors.integraOrange,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: AppFont.primaryFont),
+                Text(
+                  employee.name,
+                  style: const TextStyle(
+                    color: AppColors.integraOrange,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: AppFont.primaryFont,
+                  ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,

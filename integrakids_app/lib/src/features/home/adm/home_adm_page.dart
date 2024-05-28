@@ -19,46 +19,47 @@ class HomeAdmPage extends ConsumerWidget {
     final homeState = ref.watch(homeAdmVmProvider);
 
     return Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          shape: const CircleBorder(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        shape: const CircleBorder(),
+        backgroundColor: AppColors.integraOrange,
+        child: const CircleAvatar(
           backgroundColor: AppColors.integraOrange,
-          child: const CircleAvatar(
-            backgroundColor: AppColors.integraOrange,
-            maxRadius: 20,
-            child: Icon(
-              IntegrakidsIcons.addEmployee,
-              color: Colors.white,
-            ),
+          maxRadius: 20,
+          child: Icon(
+            IntegrakidsIcons.addEmployee,
+            color: Colors.white,
           ),
         ),
-        body: homeState.when(
-          data: (HomeAdmState data) {
-            return CustomScrollView(
-              slivers: [
-                const SliverToBoxAdapter(
-                  child: HomeHeader(),
+      ),
+      body: homeState.when(
+        data: (HomeAdmState data) {
+          return CustomScrollView(
+            slivers: [
+              const SliverToBoxAdapter(
+                child: HomeHeader(),
+              ),
+              SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, index) =>
+                      HomeEmployeeTile(employee: data.employees[index]),
+                  childCount: data.employees.length,
                 ),
-                SliverList(
-                  delegate: SliverChildBuilderDelegate(
-                    (context, index) =>
-                        HomeEmployeeTile(employee: data.employees[index]),
-                    childCount: data.employees.length,
-                  ),
-                ),
-              ],
-            );
-          },
-          error: (Object error, StackTrace stackTrace) {
-            log('Erro ao carregar terapuetas',
-                error: error, stackTrace: stackTrace);
-            return const Center(
-              child: Text('Erro ao carregar página'),
-            );
-          },
-          loading: () {
-            return const IntegrakidsLoader();
-          },
-        ));
+              ),
+            ],
+          );
+        },
+        error: (Object error, StackTrace stackTrace) {
+          log('Erro ao carregar terapuetas',
+              error: error, stackTrace: stackTrace);
+          return const Center(
+            child: Text('Erro ao carregar página'),
+          );
+        },
+        loading: () {
+          return const IntegrakidsLoader();
+        },
+      ),
+    );
   }
 }
