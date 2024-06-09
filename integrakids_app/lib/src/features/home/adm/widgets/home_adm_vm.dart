@@ -16,18 +16,17 @@ class HomeAdmVm extends _$HomeAdmVm {
     final repository = ref.read(userRepositorieProvider);
     final ClinicaModel(id: clinicaId) =
         await ref.read(getMyClinicaProvider.future);
-    final me  = await ref.watch(getMeProvider.future);
+    final me = await ref.watch(getMeProvider.future);
 
     final employeesResult = await repository.getEmployees(clinicaId);
 
     switch (employeesResult) {
       case Success(value: final employeesData):
-      final employees = <UserModel> [];
-      employees.addAll(employeesData);
-        if(me case UserModelADM(workDays: _?, workHours: _?)){
+        final employees = <UserModel>[];
+        if (me case UserModelADM(workDays: _?, workHours: _?)) {
           employees.add(me);
-      }
-
+        }
+        employees.addAll(employeesData);
         return HomeAdmState(
           status: HomeAdmStatus.loaded,
           employees: employees,

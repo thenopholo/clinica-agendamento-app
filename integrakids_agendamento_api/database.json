@@ -49,23 +49,6 @@
         7,
         8
       ]
-    },
-    {
-      "id": 4,
-      "name": "Rodrigo Rahman 1 Employee",
-      "email": "rodrigorahman1employee@gmail.com",
-      "password": "123123",
-      "profile": "EMPLOYEE",
-      "clinica_id": 4,
-      "work_days": [
-        "Seg",
-        "Qua"
-      ],
-      "work_hours": [
-        6,
-        7,
-        8
-      ]
     }
   ],
   "adm_users": [],
