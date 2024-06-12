@@ -20,7 +20,10 @@ class HomeAdmPage extends ConsumerWidget {
 
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () async {
+          await Navigator.of(context).pushNamed('/employee/register');
+          ref.invalidate(homeAdmVmProvider);
+        },
         shape: const CircleBorder(),
         backgroundColor: AppColors.integraOrange,
         child: const CircleAvatar(

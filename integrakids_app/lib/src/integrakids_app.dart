@@ -7,6 +7,7 @@ import 'core/ui/widgets/integrakids_loader.dart';
 import 'features/auth/login/login_page.dart';
 import 'features/auth/register/clinica/clinica_register_page.dart';
 import 'features/auth/register/user/user_resgister_page.dart';
+import 'features/employee/register/employee_resgister_page.dart';
 import 'features/home/adm/home_adm_page.dart';
 import 'features/splash/slpash_page.dart';
 
@@ -30,7 +31,8 @@ class IntegrakidsApp extends StatelessWidget {
             '/auth/register/user': (_) => const UserResgisterPage(),
             '/auth/register/create_clinica': (_) => const ClinicaRegisterPage(),
             '/home/adm': (_) => const HomeAdmPage(),
-            '/home/employee': (_) => const Text('EMPLOYEE'),
+            '/home/employee': (_) => const Text('Employee'),
+            '/employee/register': (_) => const EmployeeResgisterPage(),
           },
         );
       },
