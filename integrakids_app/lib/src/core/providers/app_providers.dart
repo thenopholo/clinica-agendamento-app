@@ -6,6 +6,8 @@ import '../../model/clinica_model.dart';
 import '../../model/user_model.dart';
 import '../../repositories/clicina/clinica_reposiotry.dart';
 import '../../repositories/clicina/clinica_repository_impl.dart';
+import '../../repositories/schedule/schedule_repository.dart';
+import '../../repositories/schedule/schedule_repository_impl.dart';
 import '../../repositories/user/user_repository_impl.dart';
 import '../../services/user_login/user_login_service.dart';
 import '../../services/user_login/user_login_service_impl.dart';
@@ -65,3 +67,9 @@ Future<void> logout(LogoutRef ref) async {
   Navigator.of(ClinicaNavGlobalKey.instance.navKey.currentContext!)
       .pushNamedAndRemoveUntil('/auth/login', (route) => false);
 }
+
+@riverpod
+ScheduleRepository scheduleRepository(ScheduleRepositoryRef ref) =>
+    ScheduleRepositoryImpl(
+      restClient: ref.read(restClientProvider),
+    );

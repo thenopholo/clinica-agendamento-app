@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -5,7 +6,11 @@ import '../utils/app_colors.dart';
 import 'integrakids_icons.dart';
 
 class AvatarWidget extends StatelessWidget {
-  const AvatarWidget({super.key});
+  final bool hideUploadButton;
+  const AvatarWidget({
+    Key? key,
+    this.hideUploadButton = false,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,16 +32,19 @@ class AvatarWidget extends StatelessWidget {
           Positioned(
             bottom: 5,
             right: 5,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(color: AppColors.integraOrange, width: 2),
-                shape: BoxShape.circle,
-              ),
-              child: const Icon(
-                IntegrakidsIcons.addEmployee,
-                color: AppColors.integraOrange,
-                size: 25,
+            child: Offstage(
+              offstage: hideUploadButton,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: AppColors.integraOrange, width: 2),
+                  shape: BoxShape.circle,
+                ),
+                child: const Icon(
+                  IntegrakidsIcons.addEmployee,
+                  color: AppColors.integraOrange,
+                  size: 25,
+                ),
               ),
             ),
           )

@@ -9,6 +9,7 @@ import 'features/auth/register/clinica/clinica_register_page.dart';
 import 'features/auth/register/user/user_resgister_page.dart';
 import 'features/employee/register/employee_resgister_page.dart';
 import 'features/home/adm/home_adm_page.dart';
+import 'features/schedule/schedule_page.dart';
 import 'features/splash/slpash_page.dart';
 
 class IntegrakidsApp extends StatelessWidget {
@@ -33,6 +34,7 @@ class IntegrakidsApp extends StatelessWidget {
             '/home/adm': (_) => const HomeAdmPage(),
             '/home/employee': (_) => const Text('Employee'),
             '/employee/register': (_) => const EmployeeResgisterPage(),
+            '/schedule': (_) => const SchedulePage(),
           },
         );
       },
