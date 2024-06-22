@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/providers/app_providers.dart';
 import '../../../core/ui/utils/app_colors.dart';
 import '../../../core/ui/widgets/integrakids_icons.dart';
 import '../../../core/ui/widgets/integrakids_loader.dart';
@@ -22,6 +23,7 @@ class HomeAdmPage extends ConsumerWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           await Navigator.of(context).pushNamed('/employee/register');
+          ref.invalidate(getMeProvider);
           ref.invalidate(homeAdmVmProvider);
         },
         shape: const CircleBorder(),

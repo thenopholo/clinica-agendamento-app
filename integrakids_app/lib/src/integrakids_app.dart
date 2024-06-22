@@ -1,5 +1,6 @@
 import 'package:asyncstate/asyncstate.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'core/ui/utils/integrakids_theme.dart';
 import 'core/ui/widgets/clinica_nav_global_key.dart';
@@ -8,6 +9,7 @@ import 'features/auth/login/login_page.dart';
 import 'features/auth/register/clinica/clinica_register_page.dart';
 import 'features/auth/register/user/user_resgister_page.dart';
 import 'features/employee/register/employee_resgister_page.dart';
+import 'features/employee/schedule/employee_schedule_page.dart';
 import 'features/home/adm/home_adm_page.dart';
 import 'features/schedule/schedule_page.dart';
 import 'features/splash/slpash_page.dart';
@@ -34,8 +36,16 @@ class IntegrakidsApp extends StatelessWidget {
             '/home/adm': (_) => const HomeAdmPage(),
             '/home/employee': (_) => const Text('Employee'),
             '/employee/register': (_) => const EmployeeResgisterPage(),
+            '/employee/schedule': (_) => const EmployeeSchedulePage(),
             '/schedule': (_) => const SchedulePage(),
           },
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: const [Locale('pt', 'BR')],
+          locale: const Locale('pt', 'BR'),
         );
       },
     );
