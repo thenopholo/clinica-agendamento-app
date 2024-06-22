@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../../core/ui/utils/app_colors.dart';
 import '../../../../core/ui/utils/app_font.dart';
 import '../../../../core/ui/utils/app_images.dart';
-import '../../../../core/ui/utils/integrakids_theme.dart';
 import '../../../../core/ui/widgets/integrakids_icons.dart';
 import '../../../../model/user_model.dart';
 
@@ -68,7 +67,8 @@ class HomeEmployeeTile extends StatelessWidget {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).pushNamed('/schedule');
+                        Navigator.of(context)
+                            .pushNamed('/schedule', arguments: employee);
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.integraOrange,
